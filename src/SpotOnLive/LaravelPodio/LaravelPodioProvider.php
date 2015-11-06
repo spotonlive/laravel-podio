@@ -29,6 +29,9 @@ class LaravelPodioProvider extends ServiceProvider
      */
     public function register()
     {
+        // Podio service
+        require_once 'Services/PodioService.php';
+
         $this->mergeConfig();
     }
 

@@ -8,6 +8,11 @@ before_script:
   - composer self-update
   - composer install --prefer-source
 
+notifications:
+  slack:
+    rooms:
+      secure: "q9b/IecyAoy4GaCQBmeW/mn+xX4iESUb8ZWTMpNVq6nqGw5l8iDUvRi3+xf+sSRgxg3KXax43lhyIgUVmKImVi/VdnMkKi2WqjAOtdSIlxkp5zn3n4IvKlIhUDe1it6bZR237TdMQvuCGc/F1WIVEzW0H+qh5CFIllp5r/Sde3MRrASXCPDZdiQpbY5/ZytnKFvGmUSa4nifY2AFUQvkxlETf6gQGkpuE0O8A5x3V3cy1CPe8mKUK9sUMZbc3aG3SQJy6AvgEWz7OhLdyRUyV3crhP+OqGUSzz+pO4pM8XnTxv0j3NTjzMrsFBlreE1dIU1XgPZaguwVn1MgAACjc9mzdP+4DXVE1WZf8CLeMlXwU52iRcohEVsIIu7R++5xWBknwIbjItXQFdEBOjte70bR1MsJ0MnYW7l6G12rsUwyCgTbVaDRXMm5sfOvh0aPb8qw5ULyzQ/iUKtS9NgX8WGjt0qU83ppBWk3/tNueWChLQlAxIS8qw8todUxl6la3idyYjvC+xBjqKSImEnlTN4tcfkffw2YRalD5ZghT6DGIEDMdEJOrxddMSXbiTN+SghLYznQy3cl289KtlQRdU8vT63DdtjCto9HgWCHTck3DhEanmLbHihe8c8frt8nsWtf8UUGFFOoPUbfltsI6S4nqevF3pdZVn5YUrc6otI="
+
 script:
   - ./vendor/bin/phpunit --coverage-clover ./build/logs/clover.xml
   - ./vendor/bin/phpcs --standard=PSR2 ./src/ ./tests/ -n
