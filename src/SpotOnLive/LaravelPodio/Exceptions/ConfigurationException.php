@@ -27,7 +27,7 @@ class ConfigurationException extends Exception
     {
         throw new ConfigurationException(
             sprintf(
-                'No application configuration for %s',
+                'No configuration for application %s',
                 $appName
             )
         );
