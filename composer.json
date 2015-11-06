@@ -1,0 +1,34 @@
+{
+  "name": "spotonlive/laravel-podio",
+  "type": "library",
+  "description": "Podio integration for Laravel 5.1",
+  "keywords": [
+    "podio",
+    "laravel"
+  ],
+  "homepage": "https://github.com/spotonlive/laravel-podio",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nikolaj Petersen",
+      "email": "nikolaj.lovenhardt@gmail.com",
+      "homepage": "http://spotonmarketing.dk"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "podio/podio-php": "~4.3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0",
+    "laravel/framework": "~5.1",
+    "codeclimate/php-test-reporter": "dev-master",
+    "phpmd/phpmd" : "1.4.*",
+    "squizlabs/php_codesniffer" : "1.5.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "SpotOnLive\\LaravelPodio\\": "src/SpotOnLive/LaravelPodio/"
+    }
+  }
+}
