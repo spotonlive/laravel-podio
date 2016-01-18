@@ -11,6 +11,8 @@ namespace SpotOnLive\LaravelPodio;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Application;
+use SpotOnLive\LaravelPodio\Exception\ConfigurationException;
+use SpotOnLive\LaravelPodio\Services\PodioService;
 
 class LaravelPodioProvider extends ServiceProvider
 {
@@ -24,7 +26,7 @@ class LaravelPodioProvider extends ServiceProvider
         ]);
 
         // Require podio api
-        require_once(__DIR__ . '/../../../vendor/podio/podio-php/PodioAPI.php');
+        require_once(__DIR__ . '/../../../../../podio/podio-php/PodioAPI.php');
     }
 
     /**
@@ -32,10 +34,8 @@ class LaravelPodioProvider extends ServiceProvider
      */
     public function register()
     {
-        // Podio service
-        require_once 'Providers/Services/PodioServiceProvider.php';
-
         $this->mergeConfig();
+        $this->registerServices();
     }
 
     /**
@@ -47,5 +47,23 @@ class LaravelPodioProvider extends ServiceProvider
             __DIR__ . '/../../config/config.php',
             'podio'
         );
+    }
+
+    /**
+     * Register services
+     */
+    protected function registerServices()
+    {
+        // PodioService
+        $this->app->bind(PodioService::class, function (Application $app) {
+            /** @var array $config */
+            $config = config('podio');
+
+            if (!$config) {
+                ConfigurationException::message('Please provide a podio configuration');
+            }
+
+            return new PodioService($config);
+        });
     }
 }
