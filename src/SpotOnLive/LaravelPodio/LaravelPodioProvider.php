@@ -24,9 +24,6 @@ class LaravelPodioProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../../config/config.php' => config_path('podio.php'),
         ]);
-
-        // Require podio api
-        require_once(__DIR__ . '/../../../../../podio/podio-php/PodioAPI.php');
     }
 
     /**
