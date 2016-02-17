@@ -2,12 +2,12 @@
 
 return [
     // Authorization
-    'clientId' => '',
-    'clientSecret' => '',
+    'clientId' => env('PODIO_CLIENT_ID', null),
+    'clientSecret' => env('PODIO_CLIENT_SECRET', null),
 
     // Podio username / password (optional)
-    'username' => null,
-    'password' => null,
+    'username' => env('PODIO_USERNAME', null),
+    'password' => env('PODIO_PASSWORD', null),
 
     'options' => [
         // session_manager => '',
