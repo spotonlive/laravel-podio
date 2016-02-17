@@ -4,6 +4,7 @@ return [
     // Authorization
     'clientId' => '',
     'clientSecret' => '',
+
     'options' => [
         // session_manager => '',
         // curl_options => '',
