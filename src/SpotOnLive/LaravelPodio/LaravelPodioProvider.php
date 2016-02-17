@@ -11,7 +11,7 @@ namespace SpotOnLive\LaravelPodio;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Application;
-use SpotOnLive\LaravelPodio\Exception\ConfigurationException;
+use SpotOnLive\LaravelPodio\Exceptions\ConfigurationException;
 use SpotOnLive\LaravelPodio\Services\PodioService;
 
 class LaravelPodioProvider extends ServiceProvider

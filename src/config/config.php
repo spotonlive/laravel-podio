@@ -5,6 +5,10 @@ return [
     'clientId' => '',
     'clientSecret' => '',
 
+    // Podio username / password (optional)
+    'username' => null,
+    'password' => null,
+
     'options' => [
         // session_manager => '',
         // curl_options => '',
@@ -20,5 +24,5 @@ return [
             'id' => '',
             'token' => '',
         ],
-    ]
+    ],
 ];

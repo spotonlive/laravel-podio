@@ -10,6 +10,15 @@ class PodioOptions extends Options implements OptionsInterface
         'clientId' => null,
         'clientSecret' => null,
 
+        // Podio username / password (optional)
+        'username' => null,
+        'password' => null,
+
+        'options' => [
+            // session_manager => '',
+            // curl_options => '',
+        ],
+
         // Applications
         'apps' => [],
     ];

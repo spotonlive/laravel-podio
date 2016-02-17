@@ -7,13 +7,22 @@ use SpotOnLive\LaravelPodio\Options\PodioOptions;
 
 class PodioOptionsTest extends PHPUnit_Framework_TestCase
 {
-    /** @var \LaravelUserNotifications\Options\PodioOptions */
+    /** @var \SpotOnLive\LaravelPodio\Options\PodioOptions */
     protected $options;
 
     protected $defaults = [
         // Authorization
         'clientId' => null,
         'clientSecret' => null,
+
+        // Podio username / password (optional)
+        'username' => null,
+        'password' => null,
+
+        'options' => [
+            // session_manager => '',
+            // curl_options => '',
+        ],
 
         // Applications
         'apps' => [],
@@ -54,6 +63,15 @@ class PodioOptionsTest extends PHPUnit_Framework_TestCase
             // Authorization
             'clientId' => null,
             'clientSecret' => null,
+
+            // Podio username / password (optional)
+            'username' => null,
+            'password' => null,
+
+            'options' => [
+                // session_manager => '',
+                // curl_options => '',
+            ],
 
             // Applications
             'apps' => [],

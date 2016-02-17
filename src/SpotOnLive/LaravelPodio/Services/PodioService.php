@@ -3,8 +3,8 @@
 namespace SpotOnLive\LaravelPodio\Services;
 
 use Podio;
-use SpotOnLive\LaravelPodio\Exception\ConfigurationException;
 use SpotOnLive\LaravelPodio\Options\PodioOptions;
+use SpotOnLive\LaravelPodio\Exceptions\ConfigurationException;
 
 class PodioService
 {
@@ -18,15 +18,26 @@ class PodioService
     }
 
     /**
-     * Authorize with application
+     * Authenticate with application
      *
      * @param string $appName
      */
-    public function authorizeWithApp($appName)
+    public function authenticateWithApp($appName)
     {
         $app = $this->getApp($appName);
 
         Podio::authenticate_with_app($app['id'], $app['token']);
+    }
+
+    /**
+     * Authenticate with password
+     */
+    public function authenticateWithPassword()
+    {
+        Podio::authenticate_with_password(
+            $this->options->get('username'),
+            $this->options->get('password')
+        );
     }
 
     /**
