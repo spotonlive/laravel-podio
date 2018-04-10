@@ -41,6 +41,14 @@ class PodioService
     }
 
     /**
+     * @return bool
+     */
+    public function isAuthenticated(): bool
+    {
+        return Podio::is_authenticated();
+    }
+
+    /**
      * Setup
      *
      * @throws ConfigurationException
