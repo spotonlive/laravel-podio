@@ -2,7 +2,7 @@
 
 namespace LaravelPodioTest\Options;
 
-use SpotOnLive\LaravelPodio\Options\Options;
+use Repasse\LaravelPodio\Options\Options;
 use PHPUnit_Framework_TestCase;
 
 class OptionsTest extends PHPUnit_Framework_TestCase

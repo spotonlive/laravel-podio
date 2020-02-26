@@ -5,9 +5,9 @@ namespace LaravelPodioTest\Services;
 use Podio;
 use Mockery;
 use PHPUnit_Framework_TestCase;
-use SpotOnLive\LaravelPodio\Options\PodioOptions;
-use SpotOnLive\LaravelPodio\Services\PodioService;
-use SpotOnLive\LaravelPodio\Exceptions\ConfigurationException;
+use Repasse\LaravelPodio\Options\PodioOptions;
+use Repasse\LaravelPodio\Services\PodioService;
+use Repasse\LaravelPodio\Exceptions\ConfigurationException;
 
 class PodioServiceTest extends PHPUnit_Framework_TestCase
 {

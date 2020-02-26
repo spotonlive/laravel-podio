@@ -1,23 +1,28 @@
 {
-  "name": "spotonlive/laravel-podio",
+  "name": "repasse/laravel-podio",
   "type": "library",
   "description": "Podio integration for Laravel 5+",
   "keywords": [
     "podio",
     "laravel"
   ],
-  "homepage": "https://github.com/spotonlive/laravel-podio",
+  "homepage": "https://github.com/repasse/laravel-podio",
   "license": "MIT",
   "authors": [
     {
       "name": "Nikolaj Løvenhardt Petersen",
       "email": "nikolaj.lovenhardt@gmail.com",
       "homepage": "https://github.com/nikolajlovenhardt"
+    },
+    {
+      "name": "Rafael Mena Barreto",
+      "email": "rafaelmenabarreto@gmail.com",
+      "homepage": "https://github.com/rafaelmb"
     }
   ],
   "require": {
     "php": ">=5.6.0",
-    "podio/podio-php": "~4.3.0"
+    "podio-community/podio-php": "^v4.4.0"
   },
   "require-dev": {
     "phpunit/phpunit": "~5.2.6",
@@ -29,7 +34,7 @@
   },
   "autoload": {
     "psr-4": {
-      "SpotOnLive\\LaravelPodio\\": "src/SpotOnLive/LaravelPodio/"
+      "Repasse\\LaravelPodio\\": "src/Repasse/LaravelPodio/"
     }
   }
 }

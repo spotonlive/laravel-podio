@@ -3,7 +3,7 @@
 namespace LaravelPodioTest\Options;
 
 use PHPUnit_Framework_TestCase;
-use SpotOnLive\LaravelPodio\Options\PodioOptions;
+use Repasse\LaravelPodio\Options\PodioOptions;
 
 class PodioOptionsTest extends PHPUnit_Framework_TestCase
 {
