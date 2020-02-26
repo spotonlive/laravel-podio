@@ -1,6 +1,6 @@
 <?php
 
-namespace SpotOnLive\LaravelPodio\Exceptions;
+namespace Repasse\LaravelPodio\Exceptions;
 
 use Exception;
 

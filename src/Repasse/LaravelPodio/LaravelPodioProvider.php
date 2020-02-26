@@ -7,12 +7,12 @@
  * @package SpotOnLive\LaravelPodio
  */
 
-namespace SpotOnLive\LaravelPodio;
+namespace Repasse\LaravelPodio;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Application;
-use SpotOnLive\LaravelPodio\Exceptions\ConfigurationException;
-use SpotOnLive\LaravelPodio\Services\PodioService;
+use Repasse\LaravelPodio\Exceptions\ConfigurationException;
+use Repasse\LaravelPodio\Services\PodioService;
 
 class LaravelPodioProvider extends ServiceProvider
 {

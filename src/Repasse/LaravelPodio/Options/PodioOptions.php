@@ -1,6 +1,6 @@
 <?php
 
-namespace SpotOnLive\LaravelPodio\Options;
+namespace Repasse\LaravelPodio\Options;
 
 class PodioOptions extends Options implements OptionsInterface
 {
